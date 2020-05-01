@@ -1,0 +1,62 @@
+.cart {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background: rgb(211, 211, 3);
+  color: #fff;
+  padding: 2rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform .7s ease-in-out;
+  z-index: 10;
+}
+
+/***
+* Uncomment on Production 
+*For The GOD's Sake! 
+**/
+.cart.hide {
+  transform: translateX(800px);
+}
+
+.cart__title {
+  text-align: center;
+}
+
+.cart a {
+  color: #fff;
+}
+
+.cartbox {
+  display: flex;
+  justify-content: center;
+}
+
+.cart__produc_item {
+  margin-bottom: .6rem;
+  text-align: center;
+  border: 2px solid rgb(24, 24, 24);
+  border-radius: .2rem;
+  color: #000;
+  padding: .3rem 0;
+  background: #ffffff69;
+}
+
+.cartbox .cartbox__box:nth-child(2) {
+  border-left: 0;
+  border-right: 0;
+}
+
+.cart__product_wraper {
+  margin: 1rem;
+}
+
+.cart__produc_item {
+  margin-bottom: .6rem;
+  text-align: center;
+  border: 2px solid rgb(24, 24, 24);
+  border-radius: .2rem;
+  color: #000;
+  padding: .3rem 0;
+}
