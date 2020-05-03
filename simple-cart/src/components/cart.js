@@ -3,6 +3,10 @@ import Counters from "./counters";
 import "./style/Cart.css";
 
 class Cart extends Component {
+  onReset = () => {
+    this.props.handleResetCart();
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -17,7 +21,10 @@ class Cart extends Component {
           {/* Cart items */}
           <div className="cart__product_wraper">
             <Counters />
-            <button className="btn btn-block btn-dark btn-sm shadow-lg">
+            <button
+              onClick={this.onReset}
+              className="btn btn-block btn-dark btn-sm shadow-lg"
+            >
               Reset Cart
             </button>
           </div>

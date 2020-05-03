@@ -3,6 +3,10 @@ import Cart from "./cart";
 import Navbar from "react-bootstrap/Navbar";
 
 class NavBar extends Component {
+  state = {
+    products: this.props.products,
+  };
+
   showCart = () => {
     document.querySelector(".cart").classList.toggle("hide");
   };
@@ -16,12 +20,15 @@ class NavBar extends Component {
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
               <button onClick={this.showCart} className="btn btn-danger btn-sm">
-                Cart
+                {this.state.products.length} items on cart
               </button>
             </Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
-        <Cart />
+        <Cart
+          products={this.state.products}
+          handleResetCart={this.props.handleResetCart}
+        />
       </React.Fragment>
     );
   }
